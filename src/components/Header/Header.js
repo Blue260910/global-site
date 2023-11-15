@@ -20,92 +20,34 @@ import {
     Paragrafo01,
 } from "../Comum/Comum";
 
-const BotaoCadastro = styled(Link)`
-    color: #fff;
-    text-align: center;
-    font-feature-settings: "clig" off, "liga" off;
-    font-family: DM Sans;
-    font-size: clamp(0.625rem, 0.509rem + 0.617vw, 1.25rem);
-    font-style: normal;
-    font-weight: 700;
-    border-radius: 9px;
-    display: flex;
-    padding: 12px 16px;
-    align-items: center;
-    gap: 8px;
-    background-color: #238ca4;
-    border: none;
-    transition: all 0.2s ease-in-out;
-
-    &:hover {
-    color: #fff;
-    background-color: #403e61;
-    }
-
-    @media (max-width: 600px) {
-        width: 40%;
-        padding: 3% 3%;
-        
-    }
+const HeaderItens = styled.h2`
+  color: #2D2C2C;
+  font-family: Epilogue;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 `
 
-const BotaoLogin = styled(Link)`
-    color: #5d5a88;
-    text-align: center;
-    font-feature-settings: "clig" off, "liga" off;
-    font-family: DM Sans;
-    font-size: clamp(0.625rem, 0.509rem + 0.617vw, 1.25rem);
-    font-style: normal;
-    font-weight: 700;
-    border-radius: 9px;
-    display: flex;
-    padding: 12px 16px;
-    align-items: center;
-    gap: 8px;
-    background-color: #fff;
-    border: 1px solid #d4d2e3;
-    transition: all 0.2s ease-in-out;
-
-    &:hover {
-    color: #fff;
-    background-color: #403e61;
-    }
-
-    @media (max-width: 600px) {
-        width: 40%;
-        padding: 3% 3%;
-        
-    }
+const HeaderItensDestaque = styled.h2`
+  color: #fff;
+  font-family: Epilogue;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #EF5821;
+  text-transform: uppercase;
+  text-align: center;
 `
 
-const BotoesContainer = styled.div`
-    display: flex;
-    gap: 16px;
-
-    @media (max-width: 600px) {
-        gap: 8px;
-        margin-top: 16px;
-    }
-`
-
-const PeDaguaTexto = styled.h1`
-color: #373549;
-text-align: center;
-font-feature-settings: 'clig' off, 'liga' off;
-font-family: Megrim;
-font-size: clamp(0.8em, 0.8em + 2vw, 2.5em);
-font-style: normal;
-font-weight: 500;
-line-height: 100%; 
-`
-
-
-
-const Link01 = styled(Link)`
-  color: #5d5a88;
-  text-decoration: none;
-  font-family: DM Sans;
-`
 
 function GlobalHeader() {
     const location = useLocation();
@@ -122,68 +64,44 @@ function GlobalHeader() {
     const [activeItem, setActiveItem] = useState(null);
   
     return (
-      <Navbar expand="sm" style={{ backgroundColor: '#fff' }}>
+      <Navbar expand="sm" style={{ backgroundColor: '#fff', maxWidth:"1920px", padding:"1% 4%" }}>
         <Container fluid>
           <a  href="#/">
-            <img src={Logo} alt='Logo com ondinhas' style={{ height: "50px", marginRight:"10px" }} />
+            <img src={Logo} alt='Logo com ondinhas' style={{ height: "50px"}} />
           </a>
-          <PeDaguaTexto>pé d’água</PeDaguaTexto>
           <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleToggleOffcanvas} />
           <Navbar.Offcanvas show={showOffcanvas} onHide={handleCloseOffcanvas} placement="end">
             <Offcanvas.Header closeButton>
               <Offcanvas.Title>
                 <div style={{ display: "flex", alignItems: "center" }}>
-                  <img src={Logo} alt='Logo com ondinhas' style={{ height: "40px", marginRight: "10px" }} />
-                  <PeDaguaTexto>pé d’água</PeDaguaTexto>
+                  <img src={Logo} alt='Logo com HapBox' style={{ height: "40px", marginRight: "10px" }} />
                 </div>
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <Nav className="justify-content-center flex-grow-1 pe-3">
+              <Nav className="justify-content-end flex-grow-1 pe-3">
                 <Nav.Link href="#/" onClick={handleCloseOffcanvas}>
-                  Home
+                  <HeaderItens>
+                    Home
+                  </HeaderItens>
                 </Nav.Link>
                 <Nav.Link href="#Consulta" onClick={handleCloseOffcanvas}>
-                  Consulta
+                  <HeaderItens>
+                    Sobre
+                  </HeaderItens>
                 </Nav.Link>
                 <Nav.Link href="#Apoio" onClick={handleCloseOffcanvas}>
-                  Apoio
+                  <HeaderItens>
+                    Quem Somos
+                  </HeaderItens>
                 </Nav.Link>
-                <Nav.Link href="#Planos" onClick={handleCloseOffcanvas}>
-                  Planos
+                <Nav.Link href="#Apoio" onClick={handleCloseOffcanvas}>
+                  <HeaderItensDestaque>
+                    Fale Conosco
+                  </HeaderItensDestaque>
                 </Nav.Link>
-                <NavDropdown
-                  title="Sobre"
-                  id="offcanvasNavbarDropdown"
-                  className={location.pathname === '/Projeto' || location.pathname === '/Grupo' ? 'ativo' : ''}
-                >
-                  <NavDropdown.Item href="#Projeto" onClick={handleCloseOffcanvas}
-                  className={location.pathname === '/Projeto' ? 'ativo' : ''}
-                  >
-                    Sobre o Projeto
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#Grupo" onClick={handleCloseOffcanvas}
-                  className={location.pathname === '/Grupo' ? 'ativo' : ''}>
-                    Sobre o Grupo
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#Contato" onClick={handleCloseOffcanvas}
-                  className={location.pathname === '/Contato' ? 'ativo' : ''}>
-                    Contato
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#Perguntas" onClick={handleCloseOffcanvas}
-                  className={location.pathname === '/Perguntas' ? 'ativo' : ''}>
-                    Perguntas Frequentes
-                  </NavDropdown.Item>
-                </NavDropdown>
+
               </Nav>
-              <BotoesContainer>
-                <BotaoLogin to="/Login" onClick={handleCloseOffcanvas}>
-                  Login
-                </BotaoLogin>
-                <BotaoCadastro to="/Cadastro" onClick={handleCloseOffcanvas}>
-                  Cadastro
-                </BotaoCadastro>
-              </BotoesContainer>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
         </Container>

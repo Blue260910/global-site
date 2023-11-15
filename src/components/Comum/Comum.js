@@ -1,6 +1,22 @@
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
 
+
+
+
+
+const DestaqueTexto = styled.h1`
+    color: #EF5821;
+    font-family: Epilogue;
+    font-size: 130px;
+    font-style: normal;
+    font-weight: 800;
+`
+
+
+
+
+
 export const Titulo01 = styled.h1`
     color: #fff;
     text-align: center;
