@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import styled from "styled-components";
 import CoverImg01 from "../../assets/Imagem-01.png";
 
@@ -44,9 +45,23 @@ const HomeSubtitulo = styled.h2`
   font-weight: 800;
   text-transform: uppercase;
 `;
+=======
+import Form from 'react-bootstrap/Form';
 
-function Home() {
+function FormGroupExample() {
+  fetch('https://hapbox-f9157-default-rtdb.firebaseio.com/.json')
+  .then(response => response.json())
+  .then(data => 
+    console.log(data)
+
+    )
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+>>>>>>> 7a69329740bad25e56f841bcf9d3e5e970085923
+
   return (
+<<<<<<< HEAD
     <HomeContainer>
       <HomeTextContainer>
         <HomeTitulo>Hap<DestaqueTexto>Box</DestaqueTexto></HomeTitulo>
@@ -54,7 +69,19 @@ function Home() {
       </HomeTextContainer>
       <img src={CoverImg01} alt="Imagem de capa" style={{width:"100%", maxWidth:"500px"}}/> 
     </HomeContainer>
+=======
+    <Form>
+      <Form.Group className="mb-3" controlId="formGroupEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formGroupPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control type="password" placeholder="Password" />
+      </Form.Group>
+    </Form>
+>>>>>>> 7a69329740bad25e56f841bcf9d3e5e970085923
   );
 }
 
-export default Home;
+export default FormGroupExample;
