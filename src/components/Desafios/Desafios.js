@@ -7,7 +7,6 @@ import HapModeloBranco from "./HapBoxModelBranco.js";
 
 const DesafiosContainer = styled.div`
   padding: 10% 10%;
-  max-width: 1920px;
   align-items: start;
 
   @media (max-width: 600px) {
@@ -80,7 +79,7 @@ const SubDestaque = styled.strong`
 const DesafiosText = styled.p`
     color: #2D2C2C;
     font-family: Epilogue;
-    font-size: 18px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 27px */

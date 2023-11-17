@@ -64,7 +64,7 @@ function GlobalHeader() {
     const [activeItem, setActiveItem] = useState(null);
   
     return (
-      <Navbar expand="sm" style={{ backgroundColor: '#fff', maxWidth:"1920px", padding:"1% 4%" }}>
+      <Navbar expand="sm" style={{ backgroundColor: '#fff', padding:"1% 4%" }}>
         <Container fluid>
           <a  href="#/">
             <img src={Logo} alt='Logo com ondinhas' style={{ height: "50px"}} />
