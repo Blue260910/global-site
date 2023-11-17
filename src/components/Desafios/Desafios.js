@@ -97,7 +97,7 @@ function Desafios() {
             </div>
                 <DesafiosText>A falta de adesão ao tratamento médico emerge como um desafio global, com até metade da população mundial não seguindo as prescrições médicas. Segundo o UOL VivaBem, na Europa, estima-se que a não adesão resulte em 200 mil mortes precoces anualmente por falta de adesão a tratamentos médicos.</DesafiosText>
         </DesafiosTextContainer>
-        <DesafiosTextContainer style={{backgroundImage: `url(${InovacaoIMG})`}}>
+        <DesafiosTextContainer style={{backgroundImage: `url(${InovacaoIMG})`, padding: "10% 3% 3% 3%;"}}>
             <div>
                 <DesafiosTopc style={{color:"#fff"}}>HapBox: a solução</DesafiosTopc>
                 <DesafiosSubTitulo style={{color:"#fff"}}>Inovação Tecnológica<br /> <SubDestaque style={{color:"#fff"}}> Promovendo <br />Adesão ao Tratamento Médico</SubDestaque></DesafiosSubTitulo>
