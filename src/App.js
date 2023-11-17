@@ -10,6 +10,7 @@ import Home from './components/Home/Home';
 import Palavras from './components/Palavras/Palavras';
 import Vantagens from './components/Vantagens/Vantagens';
 import Desafios from './components/Desafios/Desafios';
+import QuemSomos from './components/QuemSomos/QuemSomos';
 // import Login from './components/Login/Login';
 // import Cadastro from './components/Cadastro/Cadastro';
 
@@ -19,6 +20,7 @@ const HomePage = () => (
     <Palavras />
     <Vantagens />
     <Desafios />
+    <QuemSomos />
   </>
 );
 
