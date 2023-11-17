@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/global-site/static/css/main.77ace270.css",
+    "main.js": "/global-site/static/js/main.fca999bb.js",
+    "static/js/872.0486cfdd.chunk.js": "/global-site/static/js/872.0486cfdd.chunk.js",
+    "static/js/227.6917ce92.chunk.js": "/global-site/static/js/227.6917ce92.chunk.js",
+    "static/js/526.7630a563.chunk.js": "/global-site/static/js/526.7630a563.chunk.js",
+    "static/js/232.17005131.chunk.js": "/global-site/static/js/232.17005131.chunk.js",
+    "static/js/237.f5b7b981.chunk.js": "/global-site/static/js/237.f5b7b981.chunk.js",
+    "static/js/787.9a5c1d4b.chunk.js": "/global-site/static/js/787.9a5c1d4b.chunk.js",
+    "static/media/InovaçãoTecnologica.png": "/global-site/static/media/InovaçãoTecnologica.d38f5af09a9e6437b3bb.png",
+    "static/media/DesafiosGlobais.png": "/global-site/static/media/DesafiosGlobais.6dd485d1cbb72a2b7d52.png",
+    "static/media/Imagem-01.png": "/global-site/static/media/Imagem-01.9b9a24b34e6139086b61.png",
+    "static/media/palavras-grandes.png": "/global-site/static/media/palavras-grandes.24902bd3ff9c930596b0.png",
+    "index.html": "/global-site/index.html",
+    "main.77ace270.css.map": "/global-site/static/css/main.77ace270.css.map",
+    "main.fca999bb.js.map": "/global-site/static/js/main.fca999bb.js.map",
+    "872.0486cfdd.chunk.js.map": "/global-site/static/js/872.0486cfdd.chunk.js.map",
+    "227.6917ce92.chunk.js.map": "/global-site/static/js/227.6917ce92.chunk.js.map",
+    "526.7630a563.chunk.js.map": "/global-site/static/js/526.7630a563.chunk.js.map",
+    "232.17005131.chunk.js.map": "/global-site/static/js/232.17005131.chunk.js.map",
+    "237.f5b7b981.chunk.js.map": "/global-site/static/js/237.f5b7b981.chunk.js.map",
+    "787.9a5c1d4b.chunk.js.map": "/global-site/static/js/787.9a5c1d4b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.77ace270.css",
+    "static/js/main.fca999bb.js"
+  ]
+}
