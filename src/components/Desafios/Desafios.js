@@ -5,7 +5,7 @@ import HapModeloPreto from "./HapBoxModelPreto.js";
 import HapModeloBranco from "./HapBoxModelBranco.js";
 
 
-const DesafiosContainer = styled.div`
+const DesafiosContainer = styled.section`
   padding: 10% 10%;
   align-items: start;
 
@@ -123,7 +123,7 @@ const DesafiosText02 = styled.p`
 
 function Desafios() {
   return (
-    <DesafiosContainer>
+    <DesafiosContainer id="desafio">
         <DesafiosTitulo>Nosso<br /><DestaqueTexto>Desafio</DestaqueTexto></DesafiosTitulo>
         <DesafiosTextContainer01 style={{backgroundImage: `url(${DesafiosGlobaisImg})`}}>
             <div>

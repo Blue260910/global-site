@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Logo from "../../assets/logo.png";
 
+import { HashLink } from 'react-router-hash-link';
+
 const FooterContainer = styled.footer`
   width: 100%;
   background-color: #fff;
@@ -13,7 +15,7 @@ const FooterContainer = styled.footer`
   justify-content: center;
 `;
 
-const FooterItens = styled.a`
+const FooterItens = styled(HashLink)`
   color: #2D2C2C;
   font-family: Epilogue;
   font-size: 16px;
@@ -39,9 +41,10 @@ function Footer() {
     <FooterContainer>
         <ul style={{display:"flex", alignItems:"center"}}>
           <img src={Logo} alt="Logo" />
-          <FooterItens href="#home">Home</FooterItens>
-          <FooterItens href="#sobre">Sobre</FooterItens>
-          <FooterItens href="#quem-somos">Quem Somos</FooterItens>
+          <FooterItens smooth to="#home">Home</FooterItens>
+          <FooterItens smooth to="#vantagens">Vantagens</FooterItens>
+          <FooterItens smooth to="#desafio">Desafio</FooterItens>
+          <FooterItens smooth to="#quemSomos">Quem Somos</FooterItens>
         </ul>
         <Divider />
           <FooterItens>2023 HapBox. All right reserved.</FooterItens>

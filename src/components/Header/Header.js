@@ -1,27 +1,28 @@
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-import styled from 'styled-components';
-import { Link, useLocation } from 'react-router-dom';
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import styled from "styled-components";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../../assets/logo.png";
-import { useState } from 'react';
+import { useState } from "react";
+import { HashLink } from "react-router-hash-link";
 
 import {
-    Titulo01,
-    Subtitulo01,
-    Subtitulo02,
-    BotaoPrimario01,
-    BotaoPrimario02,
-    BotaoSecundario01,
-    Paragrafo01,
+  Titulo01,
+  Subtitulo01,
+  Subtitulo02,
+  BotaoPrimario01,
+  BotaoPrimario02,
+  BotaoSecundario01,
+  Paragrafo01,
 } from "../Comum/Comum";
 
-const HeaderItens = styled.h2`
-  color: #2D2C2C;
+const HeaderItens = styled(HashLink)`
+  color: #2d2c2c;
   font-family: Epilogue;
   font-size: 16px;
   font-style: normal;
@@ -32,7 +33,7 @@ const HeaderItens = styled.h2`
   justify-content: center;
   align-items: center;
   height: 100%;
-`
+`;
 
 const HeaderItensDestaque = styled.h2`
   color: #fff;
@@ -43,70 +44,102 @@ const HeaderItensDestaque = styled.h2`
   padding: 8px 20px;
   justify-content: center;
   align-items: center;
-  background-color: #EF5821;
+  background-color: #ef5821;
   text-transform: uppercase;
   text-align: center;
-`
-
+`;
 
 function GlobalHeader() {
-    const location = useLocation();
-    const [showOffcanvas, setShowOffcanvas] = useState(false);
-  
-    const handleCloseOffcanvas = () => {
-      setShowOffcanvas(false);
-    };
-  
-    const handleToggleOffcanvas = () => {
-      setShowOffcanvas(!showOffcanvas);
-    };
+  const location = useLocation();
+  const [showOffcanvas, setShowOffcanvas] = useState(false);
 
-    const [activeItem, setActiveItem] = useState(null);
-  
-    return (
-      <Navbar expand="sm" style={{ backgroundColor: '#fff', padding:"1% 4%" }}>
-        <Container fluid>
-          <a  href="#/">
-            <img src={Logo} alt='Logo com ondinhas' style={{ height: "50px"}} />
-          </a>
-          <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleToggleOffcanvas} />
-          <Navbar.Offcanvas show={showOffcanvas} onHide={handleCloseOffcanvas} placement="end">
-            <Offcanvas.Header closeButton>
-              <Offcanvas.Title>
-                <div style={{ display: "flex", alignItems: "center" }}>
-                  <img src={Logo} alt='Logo com HapBox' style={{ height: "40px", marginRight: "10px" }} />
-                </div>
-              </Offcanvas.Title>
-            </Offcanvas.Header>
-            <Offcanvas.Body>
-              <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link href="#/" onClick={handleCloseOffcanvas}>
-                  <HeaderItens>
-                    Home
-                  </HeaderItens>
-                </Nav.Link>
-                <Nav.Link href="#Consulta" onClick={handleCloseOffcanvas}>
-                  <HeaderItens>
-                    Sobre
-                  </HeaderItens>
-                </Nav.Link>
-                <Nav.Link href="#Apoio" onClick={handleCloseOffcanvas}>
-                  <HeaderItens>
-                    Quem Somos
-                  </HeaderItens>
-                </Nav.Link>
-                <Nav.Link href="#Apoio" onClick={handleCloseOffcanvas}>
-                  <HeaderItensDestaque>
-                    Fale Conosco
-                  </HeaderItensDestaque>
-                </Nav.Link>
+  const handleCloseOffcanvas = () => {
+    setShowOffcanvas(false);
+  };
 
-              </Nav>
-            </Offcanvas.Body>
-          </Navbar.Offcanvas>
-        </Container>
-      </Navbar>
-    );
-  }
-  
-  export default GlobalHeader;
+  const handleToggleOffcanvas = () => {
+    setShowOffcanvas(!showOffcanvas);
+  };
+
+  const [activeItem, setActiveItem] = useState(null);
+
+  return (
+    <Navbar expand="sm" style={{ backgroundColor: "#fff", padding: "1% 4%" }}>
+      <Container fluid>
+        <a href="#/">
+          <img src={Logo} alt="Logo com ondinhas" style={{ height: "50px" }} />
+        </a>
+        <Navbar.Toggle
+          aria-controls="offcanvasNavbar"
+          onClick={handleToggleOffcanvas}
+        />
+        <Navbar.Offcanvas
+          show={showOffcanvas}
+          onHide={handleCloseOffcanvas}
+          placement="end"
+        >
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <img
+                  src={Logo}
+                  alt="Logo com HapBox"
+                  style={{ height: "40px", marginRight: "10px" }}
+                />
+              </div>
+            </Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <Nav className="justify-content-end flex-grow-1 pe-3">
+              <Nav.Link
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  handleCloseOffcanvas();
+                }}
+              >
+                <HeaderItens smooth to="#home">
+                  Home
+                </HeaderItens>
+              </Nav.Link>
+              <Nav.Link
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  handleCloseOffcanvas();
+                }}
+              >
+                <HeaderItens smooth to="#vantagens">
+                  Vantagens
+                </HeaderItens>
+              </Nav.Link>
+              <Nav.Link
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  handleCloseOffcanvas();
+                }}
+              >
+                <HeaderItens smooth to="#desafio">
+                  Desafio
+                </HeaderItens>
+              </Nav.Link>
+              <Nav.Link
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                }}
+              >
+                <HeaderItens smooth to="#quemSomos">
+                  Quem Somos
+                </HeaderItens>
+              </Nav.Link>
+            </Nav>
+          </Offcanvas.Body>
+        </Navbar.Offcanvas>
+      </Container>
+    </Navbar>
+  );
+}
+
+export default GlobalHeader;

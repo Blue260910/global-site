@@ -66,7 +66,7 @@ margin-right: -18%;
 
 function QuemSomos() {
   return (
-    <div style={{ backgroundColor: "#131212", padding: "5% 5%" }}>
+    <section style={{ backgroundColor: "#131212", padding: "5% 5%" }} id="quemSomos">
       <QuemSomosTextContainer01>
       <div>
         <div>
@@ -103,7 +103,7 @@ function QuemSomos() {
         </GifContainer>
       </div>
       </QuemSomosTextContainer01>
-    </div>
+    </section>
   );
 }
 

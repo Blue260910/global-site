@@ -55,7 +55,7 @@ const VantagensTexto = styled.p`
 
 function vantagens() {
   return (
-    <div style={{ backgroundColor: "#131212", padding: "5% 5%" }}>
+    <section style={{ backgroundColor: "#131212", padding: "5% 5%" }} id="vantagens">
         <Row style={{ alignItems: "start", justifyContent: "center" }}>
           <Col xs="auto" className="mb-5" style={{ backgroundColor: "fff" }}>
             <VantagensContainer>
@@ -129,7 +129,7 @@ function vantagens() {
             </VantagensContainer>
           </Col>
         </Row>
-    </div>
+    </section>
   );
 }
 
