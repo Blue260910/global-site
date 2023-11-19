@@ -1,17 +1,19 @@
 import styled from "styled-components";
+import Senhora from "../../assets/Senhora.png"; 
+import GifTelas from "../../assets/GifTelas.gif"; 
 
 const QuemSomosTextContainer01 = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   align-items: start;
-  padding: 10% 3% 15% 3%;
+  padding: 10% 3% 5% 3%;
   background-repeat: no-repeat;
   background-size: cover;
 
-  @media (max-width: 600px) {
+  @media (max-width: 900px) {
     grid-template-columns: 1fr;
-    padding: 10% 3% 15% 3%;
+    padding: 10% 3% 5% 3%;
     gap: 30px;
   }
 `;
@@ -50,10 +52,23 @@ const QuemSomosText = styled.p`
   text-align: justify;
 `;
 
+const GifContainer = styled.div`
+display: flex;
+position: relative;
+margin-right: -18%;
+
+@media (max-width: 900px) {
+  margin-right: -7%;
+  margin-top: 10%;
+}
+
+`;
+
 function QuemSomos() {
   return (
     <div style={{ backgroundColor: "#131212", padding: "5% 5%" }}>
       <QuemSomosTextContainer01>
+      <div>
         <div>
           <QuemSomosTopc>Quem Somos</QuemSomosTopc>
           <QuemSomosSubTitulo>
@@ -65,6 +80,12 @@ function QuemSomos() {
             Desenvolvedores por <br /> Trás do Projeto HapBox
           </QuemSomosSubTitulo>
         </div>
+        <div style={{display:"flex"}}>
+          <img src={Senhora} alt="Senhora" style={{margin: "50px auto",width:"100%"}}/>
+        </div>
+
+      </div>
+      <div>
         <QuemSomosText>
           Nós somos Felipe Cortez dos Santos e Victor Hugo Aranda Forte, alunos
           da (FIAP) e os desenvolvedores do projeto HapBox em parceria com a
@@ -77,6 +98,10 @@ function QuemSomos() {
           uma solução que faça diferença na administração de medicamentos e na
           saúde das pessoas.
         </QuemSomosText>
+        <GifContainer>
+          <img src={GifTelas} alt="Senhora" style={{width:"100%"}}/>
+        </GifContainer>
+      </div>
       </QuemSomosTextContainer01>
     </div>
   );

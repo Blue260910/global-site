@@ -9,7 +9,7 @@ const DesafiosContainer = styled.div`
   padding: 10% 10%;
   align-items: start;
 
-  @media (max-width: 600px) {
+  @media (max-width: 900px) {
     grid-template-columns: 1fr;
     padding: 5% 0%;
     gap: 30px;
@@ -24,7 +24,7 @@ const DesafiosTitulo = styled.h1`
     font-style: normal;
     font-weight: 800;
     text-transform: uppercase;
-    @media (max-width: 600px) {
+    @media (max-width: 900px) {
         margin-left: 5%;
       }
 `;
@@ -44,7 +44,7 @@ const DesafiosTextContainer01 = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
 
-    @media (max-width: 600px) {
+    @media (max-width: 900px) {
         grid-template-columns: 1fr;
         padding: 10% 3% 15% 3%;
         gap: 30px;
@@ -61,7 +61,7 @@ const DesafiosTextContainer02 = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
 
-    @media (max-width: 600px) {
+    @media (max-width: 900px) {
         grid-template-columns: 1fr;
         padding: 10% 3% 15% 3%;
         gap: 30px;
@@ -115,7 +115,7 @@ const DesafiosText02 = styled.p`
     text-align: justify;
     grid-column: span 2;
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         grid-column: span 1;
     }
 

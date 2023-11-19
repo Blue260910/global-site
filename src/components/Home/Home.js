@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import CoverImg01 from "../../assets/Imagem-01.png";
 
-const HomeContainer = styled.div`
+const HomeContainer = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 10% 10%;
@@ -45,7 +45,7 @@ const HomeSubtitulo = styled.h2`
 
 function Home() {
   return (
-    <HomeContainer>
+    <HomeContainer id="home">
       <HomeTextContainer>
         <HomeTitulo>Hap<DestaqueTexto>Box</DestaqueTexto></HomeTitulo>
         <HomeSubtitulo>Cuidando da Sua <DestaqueTexto>Saúde</DestaqueTexto>,<br /> <DestaqueTexto>Medicamento</DestaqueTexto> por <br /><DestaqueTexto>Medicamento</DestaqueTexto></HomeSubtitulo>
