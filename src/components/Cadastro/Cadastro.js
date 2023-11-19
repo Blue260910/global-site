@@ -48,7 +48,7 @@ const CadastroContainer = styled.div`
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
     gap: 20px;
-    height: 100%;
+    height: 100vh;
   }
 `;
 
@@ -257,7 +257,7 @@ function FormPezin() {
           <Form.Group className="mb-3">
             <Form.Check
               required
-              label="Concordo em submeter meus dados pessoais para a Pe D'Água (Beta)."
+              label="Concordo em submeter meus dados pessoais para a HapBox (Beta)."
               feedback="Você deve concordar antes de enviar."
               feedbackType="invalid"
               style={{ zIndex: "2", color: "#fff" }}

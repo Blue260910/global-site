@@ -2,6 +2,7 @@ import Form from "react-bootstrap/Form";
 import styled from "styled-components";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { useEffect } from "react";
 
 import { Subtitulo01, Paragrafo01 } from "../Comum/Comum";
 
@@ -48,7 +49,7 @@ const LoginContainer = styled.div`
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
     gap: 20px;
-    height: 100%;
+    height: 100vh;
 
   }
 `;
@@ -106,6 +107,14 @@ function FormGroupExample() {
       console.log("Formulário inválido");
     }
   };
+
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("loggedInUser");
+
+    if (loggedInUser) {
+      history.push("/HomePage");
+    } 
+  }, [history]);
 
   return (
     <LoginContainer>

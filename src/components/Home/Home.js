@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+
 import styled from "styled-components";
 import CoverImg01 from "../../assets/Imagem-01.png";
 
@@ -47,15 +46,6 @@ const HomeSubtitulo = styled.h2`
 
 function Home() {
 
-  const history = useHistory();
-
-  useEffect(() => {
-    const loggedInUser = localStorage.getItem('loggedInUser');
-
-    if (!loggedInUser) {
-      history.push('/');
-    }
-  }, [history]);
   return (
     <HomeContainer id="home">
       <HomeTextContainer>

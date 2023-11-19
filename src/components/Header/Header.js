@@ -10,6 +10,9 @@ import { Link, useLocation } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import { useState } from "react";
 import { HashLink } from "react-router-hash-link";
+import { useEffect } from "react";
+import { useHistory } from "react-router-dom";
+import { FaSignOutAlt } from "react-icons/fa";
 
 import {
   Titulo01,
@@ -49,9 +52,24 @@ const HeaderItensDestaque = styled.h2`
   text-align: center;
 `;
 
+const HeaderUserName = styled.h2`
+color: #2d2c2c;
+font-family: Epilogue;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+text-transform: uppercase;
+line-height: 16px;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+`;
+
 function GlobalHeader() {
   const location = useLocation();
   const [showOffcanvas, setShowOffcanvas] = useState(false);
+  const [firstName, setFirstName] = useState("");
 
   const handleCloseOffcanvas = () => {
     setShowOffcanvas(false);
@@ -63,12 +81,35 @@ function GlobalHeader() {
 
   const [activeItem, setActiveItem] = useState(null);
 
+  const history = useHistory();
+
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("loggedInUser");
+
+    if (!loggedInUser) {
+      history.push("/");
+    } else {
+      const firstName = loggedInUser.split(" ")[0];
+      setFirstName(firstName);
+      console.log(firstName); // This will log the first name to the console
+    }
+  }, [history]);
+
+  const handleLogout = () => {
+    localStorage.removeItem('loggedInUser');
+    history.push('/');
+  };
+
   return (
     <Navbar expand="sm" style={{ backgroundColor: "#fff", padding: "1% 4%" }}>
       <Container fluid>
         <a href="#/">
           <img src={Logo} alt="Logo com ondinhas" style={{ height: "50px" }} />
         </a>
+        <HeaderUserName style={{ marginLeft: "10px" }}>
+          {firstName}
+          <FaSignOutAlt style={{ marginLeft: "10px", cursor:"pointer" }} onClick={handleLogout} />
+        </HeaderUserName>
         <Navbar.Toggle
           aria-controls="offcanvasNavbar"
           onClick={handleToggleOffcanvas}
