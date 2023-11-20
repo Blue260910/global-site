@@ -19,7 +19,6 @@ const QuemSomosTextContainer01 = styled.div`
 `;
 
 const QuemSomosTopc = styled.h1`
-  color: #fff;
   font-family: Epilogue;
   font-size: clamp(1rem, 0.901rem + 0.526vw, 1.375rem);
   font-style: normal;
@@ -29,7 +28,6 @@ const QuemSomosTopc = styled.h1`
 `;
 
 const QuemSomosSubTitulo = styled.h2`
-  color: #fff;
   font-family: Epilogue;
   font-size: clamp(2.5rem, 2.336rem + 0.877vw, 3.125rem);
   font-style: normal;
@@ -38,12 +36,11 @@ const QuemSomosSubTitulo = styled.h2`
 `;
 
 const SubDestaque = styled.strong`
-  color: #ef5821;
+  color: #EF5821;
   font-weight: 800;
 `;
 
 const QuemSomosText = styled.p`
-  color: #fff;
   font-family: Epilogue;
   font-size: clamp(1.125rem, 0.986rem + 0.741vw, 1.875rem);
   font-style: normal;
@@ -70,10 +67,9 @@ function QuemSomos() {
       <QuemSomosTextContainer01>
       <div>
         <div>
-          <QuemSomosTopc>Quem Somos</QuemSomosTopc>
-          <QuemSomosSubTitulo>
-            <SubDestaque style={{ color: "#fff" }}>
-              {" "}
+          <QuemSomosTopc className="TextWhite">Quem Somos</QuemSomosTopc>
+          <QuemSomosSubTitulo className="TextWhite">
+            <SubDestaque style={{ color: "#fff" }} className="TextWhite">
               Conectando, <br />
               Cuidado e Inovando{" "}
             </SubDestaque>
@@ -86,14 +82,14 @@ function QuemSomos() {
 
       </div>
       <div>
-        <QuemSomosText>
+        <QuemSomosText className="TextWhite">
           Nós somos Felipe Cortez dos Santos e Victor Hugo Aranda Forte, alunos
-          da (FIAP) e os desenvolvedores do projeto HapBox em parceria com a
+          da (FIAP) e os desenvolvedores do projeto <strong>HapBox</strong> em parceria com a
           HapVida.<br /> <br />
           Em nossos papéis, desempenhamos funções essenciais desde a
           concepção até a implementação deste dispositivo inovador. <br /> <br />
           Combinamos nossas habilidades em engenharia de software, design e gestão de
-          projeto para garantir o sucesso e a eficácia do HapBox. <br /> <br /> 
+          projeto para garantir o sucesso e a eficácia do <strong>HapBox</strong>. <br /> <br /> 
           Estamos entusiasmados em colaborar e aplicar nossos conhecimentos para criar
           uma solução que faça diferença na administração de medicamentos e na
           saúde das pessoas.

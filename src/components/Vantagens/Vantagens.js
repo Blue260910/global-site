@@ -14,7 +14,6 @@ const VantagensContainer = styled.div`
 `;
 
 const VantagensNumber = styled.h1`
-  color: #fff;
   font-family: Epilogue;
   font-size: 60px;
   font-style: normal;
@@ -28,7 +27,6 @@ const VantagensNumber = styled.h1`
 `;
 
 const VantagensTitulo = styled.h1`
-  color: #fff;
   font-family: Epilogue;
   font-size: 30px;
   font-style: normal;
@@ -41,7 +39,6 @@ const VantagensTitulo = styled.h1`
 `;
 
 const VantagensTexto = styled.p`
-  color: #fff;
   font-family: Epilogue;
   font-size: 18px;
   font-style: normal;
@@ -59,10 +56,10 @@ function vantagens() {
         <Row style={{ alignItems: "start", justifyContent: "center" }}>
           <Col xs="auto" className="mb-5" style={{ backgroundColor: "fff" }}>
             <VantagensContainer>
-              <VantagensNumber>01.</VantagensNumber>
+              <VantagensNumber className="TextWhite">01.</VantagensNumber>
               <div>
-                <VantagensTitulo>Feito para Você</VantagensTitulo>
-                <VantagensTexto>
+                <VantagensTitulo className="TextWhite">Feito para Você</VantagensTitulo>
+                <VantagensTexto className="TextWhite">
                   Personalize seu cronograma para um cuidado personalizado com
                   HapBox.
                 </VantagensTexto>
@@ -71,10 +68,10 @@ function vantagens() {
           </Col>
           <Col xs="auto" className="mb-5" style={{ backgroundColor: "fff" }}>
             <VantagensContainer>
-              <VantagensNumber>02.</VantagensNumber>
+              <VantagensNumber className="TextWhite">02.</VantagensNumber>
               <div>
-                <VantagensTitulo>Simples, mas Poderoso</VantagensTitulo>
-                <VantagensTexto>
+                <VantagensTitulo className="TextWhite">Simples, mas Poderoso</VantagensTitulo>
+                <VantagensTexto className="TextWhite">
                   HapBox torna a tomada de medicamentos simples e sem estresse.
                 </VantagensTexto>
               </div>
@@ -82,10 +79,10 @@ function vantagens() {
           </Col>
           <Col xs="auto" className="mb-5" style={{ backgroundColor: "fff" }}>
             <VantagensContainer>
-              <VantagensNumber>03.</VantagensNumber>
+              <VantagensNumber className="TextWhite">03.</VantagensNumber>
               <div>
-                <VantagensTitulo>Segurança e Confiança</VantagensTitulo>
-                <VantagensTexto>
+                <VantagensTitulo className="TextWhite">Segurança e Confiança</VantagensTitulo>
+                <VantagensTexto className="TextWhite">
                   Descanse tranquilo com a administração confiável de
                   medicamentos da HapBox.
                 </VantagensTexto>
@@ -94,10 +91,10 @@ function vantagens() {
           </Col>
           <Col xs="auto" className="mb-5" style={{ backgroundColor: "fff" }}>
             <VantagensContainer>
-              <VantagensNumber>04.</VantagensNumber>
+              <VantagensNumber className="TextWhite">04.</VantagensNumber>
               <div>
-                <VantagensTitulo>Segurança Adaptável</VantagensTitulo>
-                <VantagensTexto>
+                <VantagensTitulo className="TextWhite">Segurança Adaptável</VantagensTitulo>
+                <VantagensTexto className="TextWhite">
                   HapBox, uma solução adaptável para idosos, oferece segurança e
                   tranquilidade.
                 </VantagensTexto>
@@ -106,10 +103,10 @@ function vantagens() {
           </Col>
           <Col xs="auto" className="mb-5" style={{ backgroundColor: "fff" }}>
             <VantagensContainer>
-              <VantagensNumber>05.</VantagensNumber>
+              <VantagensNumber className="TextWhite">05.</VantagensNumber>
               <div>
-                <VantagensTitulo>Comunicação Eficiente</VantagensTitulo>
-                <VantagensTexto>
+                <VantagensTitulo className="TextWhite">Comunicação Eficiente</VantagensTitulo>
+                <VantagensTexto className="TextWhite">
                   Mantenha seu médico na linha para ajustes precisos e
                   eficientes.
                 </VantagensTexto>
@@ -118,10 +115,10 @@ function vantagens() {
           </Col>
           <Col xs="auto" className="mb-5" style={{ backgroundColor: "fff" }}>
             <VantagensContainer>
-              <VantagensNumber>06.</VantagensNumber>
+              <VantagensNumber className="TextWhite">06.</VantagensNumber>
               <div>
-                <VantagensTitulo>Lembre-se sem Esforço</VantagensTitulo>
-                <VantagensTexto>
+                <VantagensTitulo className="TextWhite">Lembre-se sem Esforço</VantagensTitulo>
+                <VantagensTexto className="TextWhite">
                   Receba lembretes personalizados para manter o controle de seus
                   medicamentos.
                 </VantagensTexto>

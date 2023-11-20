@@ -1,0 +1,16 @@
+.TextPrimary {
+  color: #2D2C2C;
+}
+
+.TextSecondary {
+  color: #EF5821;
+}
+
+.TextWhite {
+  color: #ffffff;
+}
+
+strong {
+  font-weight: 700;
+  color: #EF5821;
+}

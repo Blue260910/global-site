@@ -18,7 +18,6 @@ const DesafiosContainer = styled.section`
 
 
 const DesafiosTitulo = styled.h1`
-    color: #2D2C2C;
     font-family: Epilogue;
     font-size: clamp(3.125rem, 1.809rem + 7.018vw, 8.125rem);
     font-style: normal;
@@ -28,10 +27,6 @@ const DesafiosTitulo = styled.h1`
         margin-left: 5%;
       }
 `;
-
-const DestaqueTexto = styled.strong`
-    color: #EF5821;
-`
 
 const DesafiosTextContainer01 = styled.div`
     display: grid;
@@ -71,7 +66,6 @@ const DesafiosTextContainer02 = styled.div`
 
 
 const DesafiosTopc = styled.h1`
-    color: #2D2C2C;
     font-family: Epilogue;
     font-size: clamp(1rem, 0.901rem + 0.526vw, 1.375rem);
     font-style: normal;
@@ -81,7 +75,6 @@ const DesafiosTopc = styled.h1`
 `;
 
 const DesafiosSubTitulo = styled.h2`
-    color: #2D2C2C;
     font-family: Epilogue;
     font-size: clamp(2.5rem, 2.336rem + 0.877vw, 3.125rem);
     font-style: normal;
@@ -95,7 +88,6 @@ const SubDestaque = styled.strong`
 `;
 
 const DesafiosText = styled.p`
-    color: #2D2C2C;
     font-family: Epilogue;
     font-size: clamp(1.125rem, 0.986rem + 0.741vw, 1.875rem);
     font-style: normal;
@@ -106,7 +98,6 @@ const DesafiosText = styled.p`
 `;
 
 const DesafiosText02 = styled.p`
-    color: #2D2C2C;
     font-family: Epilogue;
     font-size: clamp(1.125rem, 0.986rem + 0.741vw, 1.875rem);
     font-style: normal;
@@ -115,7 +106,7 @@ const DesafiosText02 = styled.p`
     text-align: justify;
     grid-column: span 2;
 
-    @media (max-width: 900px) {
+    @media (max-width: 900px) {SubDestaquecolor
         grid-column: span 1;
     }
 
@@ -124,22 +115,22 @@ const DesafiosText02 = styled.p`
 function Desafios() {
   return (
     <DesafiosContainer id="desafio">
-        <DesafiosTitulo>Nosso<br /><DestaqueTexto>Desafio</DestaqueTexto></DesafiosTitulo>
+        <DesafiosTitulo className="TextPrimary">Nosso<br /><strong>Desafio</strong></DesafiosTitulo>
         <DesafiosTextContainer01 style={{backgroundImage: `url(${DesafiosGlobaisImg})`}}>
             <div>
-                <DesafiosTopc>Tratamentos Medicos</DesafiosTopc>
-                <DesafiosSubTitulo>Desafios Globais <br /> <SubDestaque> Adesão ao <br />Tratamento Médico </SubDestaque></DesafiosSubTitulo>
+                <DesafiosTopc className="TextPrimary">Tratamentos Medicos</DesafiosTopc>
+                <DesafiosSubTitulo className="TextPrimary">Desafios Globais <br /> <SubDestaque> Adesão ao <br />Tratamento Médico </SubDestaque></DesafiosSubTitulo>
             </div>
-                <DesafiosText>A falta de adesão ao tratamento médico emerge como um desafio global, com até metade da população mundial não seguindo as prescrições médicas. Segundo o UOL VivaBem, na Europa, estima-se que a não adesão resulte em 200 mil mortes precoces anualmente por falta de adesão a tratamentos médicos.</DesafiosText>
+                <DesafiosText className="TextPrimary">A falta de adesão ao tratamento médico emerge como um desafio global, com até metade da população mundial não seguindo as prescrições médicas. Segundo o UOL VivaBem, na Europa, estima-se que a não adesão resulte em 200 mil mortes precoces anualmente por falta de adesão a tratamentos médicos.</DesafiosText>
         </DesafiosTextContainer01>
         <DesafiosTextContainer02 style={{backgroundImage: `url(${InovacaoIMG})`, padding: "10% 3% 3% 3%;"}}>
             <div>
-                <DesafiosTopc style={{color:"#fff"}}>HapBox: a solução</DesafiosTopc>
-                <DesafiosSubTitulo style={{color:"#fff"}}>Inovação Tecnológica<br /> <SubDestaque style={{color:"#fff"}}> Promovendo <br />Adesão ao Tratamento Médico</SubDestaque></DesafiosSubTitulo>
+                <DesafiosTopc className="TextWhite">HapBox: a solução</DesafiosTopc>
+                <DesafiosSubTitulo className="TextWhite">Inovação Tecnológica<br /> <SubDestaque style={{color:"#fff"}}> Promovendo <br />Adesão ao Tratamento Médico</SubDestaque></DesafiosSubTitulo>
             </div>
-                <DesafiosText style={{color:"#fff"}}>A proposta do <DestaqueTexto>HapBox</DestaqueTexto>, um projeto desenvolvido pela equipe da Faculdade de Informática e Administração Paulista (FIAP), visa abordar os desafios globais de adesão ao tratamento médico, especialmente entre os idosos.</DesafiosText>
+                <DesafiosText className="TextWhite" >A proposta do <strong>HapBox</strong>, um projeto desenvolvido pela equipe da Faculdade de Informática e Administração Paulista (FIAP), visa abordar os desafios globais de adesão ao tratamento médico, especialmente entre os idosos.</DesafiosText>
 
-                <DesafiosText02 style={{color:"#fff"}}>O <DestaqueTexto>HapBox</DestaqueTexto> é um dispositivo inovador que automatiza a administração de medicamentos, conectando-se diretamente ao médico e oferecendo personalização para o usuário. Com dispensa automática e integração IoT, promove uma gestão eficaz do tratamento, melhorando a adesão por meio de uma abordagem prática e organizada, fortalecendo a supervisão médica.</DesafiosText02>
+                <DesafiosText02 className="TextWhite">O <strong>HapBox</strong> é um dispositivo inovador que automatiza a administração de medicamentos, conectando-se diretamente ao médico e oferecendo personalização para o usuário. Com dispensa automática e integração IoT, promove uma gestão eficaz do tratamento, melhorando a adesão por meio de uma abordagem prática e organizada, fortalecendo a supervisão médica.</DesafiosText02>
                 <HapModeloPreto />
                 <HapModeloBranco />
         </DesafiosTextContainer02>

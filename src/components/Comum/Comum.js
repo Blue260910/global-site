@@ -18,7 +18,6 @@ const DestaqueTexto = styled.h1`
 
 
 export const Titulo01 = styled.h1`
-    color: #fff;
     text-align: center;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: DM Sans;
@@ -28,7 +27,6 @@ export const Titulo01 = styled.h1`
 `;
 
 export const Subtitulo01 = styled.h2`
-    color: #fff;
     text-align: center;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: DM Sans;
@@ -38,7 +36,6 @@ export const Subtitulo01 = styled.h2`
 `;
 
 export const Subtitulo02 = styled.h3`
-    color: #fff;
     text-align: center;
     font-family: DM Sans;
     font-size: clamp(1.063rem, 0.889rem + 0.926vw, 2rem);
@@ -47,7 +44,6 @@ export const Subtitulo02 = styled.h3`
 `;
 
 export const Paragrafo01 = styled.p`
-    color: #fff;
     text-align: center;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: DM Sans;
@@ -57,7 +53,6 @@ export const Paragrafo01 = styled.p`
 `;
 
 export const BotaoPrimario01 = styled(Link)`
-    color: #fff;
     text-align: center;
     font-feature-settings: "clig" off, "liga" off;
     font-family: DM Sans;
@@ -74,7 +69,6 @@ export const BotaoPrimario01 = styled(Link)`
     transition: all 0.2s ease-in-out;
 
     &:hover {
-    color: #fff;
     background-color: #403e61;
     }
 
@@ -86,7 +80,6 @@ export const BotaoPrimario01 = styled(Link)`
 `
 
 export const BotaoPrimario02 = styled.button`
-    color: #fff;
     text-align: center;
     font-feature-settings: "clig" off, "liga" off;
     font-family: DM Sans;
@@ -105,7 +98,6 @@ export const BotaoPrimario02 = styled.button`
     transition: all 0.2s ease-in-out;
 
     &:hover {
-    color: #fff;
     background-color: #201C4B;
     }
 `
@@ -128,7 +120,6 @@ export const BotaoSecundario01 = styled(Link)`
     transition: all 0.2s ease-in-out;
 
     &:hover {
-    color: #fff;
     background-color: #403e61;
     }
 

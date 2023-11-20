@@ -8,7 +8,6 @@ import { Subtitulo01, Paragrafo01 } from "../Comum/Comum.js";
 import LogoBranco from "../../assets/LogoBranca.png";
 
 const BotaoCadastro = styled.button`
-  color: #fff;
   text-align: center;
   font-feature-settings: "clig" off, "liga" off;
   font-family: DM Sans;
@@ -158,7 +157,8 @@ function FormPezin() {
     >
       <Subtitulo01
         id="Subtitulo01"
-        style={{ color: "#fff", textAlign: "center" }}
+        style={{textAlign: "center" }}
+        className="TextWhite"
       >
         Criar conta
       </Subtitulo01>
@@ -174,7 +174,8 @@ function FormPezin() {
             type="Nome"
             placeholder="Nome"
             ref={nameRef}
-            style={{ background: "#F0EFFF", color: "#5d5a88" }}
+            style={{ background: "#F0EFFF"}}
+            className="TextPrimary"
             required
             isValid={nameValid}
             onChange={handleNameChange}
@@ -195,7 +196,8 @@ function FormPezin() {
             type="text"
             placeholder="Email"
             ref={emailRef}
-            style={{ background: "#F0EFFF", color: "#5d5a88" }}
+            style={{ background: "#F0EFFF"}}
+            className="TextPrimary"
             required
             isInvalid={!emailValid}
             isValid={emailValid}
@@ -224,7 +226,8 @@ function FormPezin() {
             type="text"
             placeholder="Senha"
             ref={senhaRef}
-            style={{ background: "#F0EFFF", color: "#5d5a88" }}
+            style={{ background: "#F0EFFF"}}
+            className="TextPrimary"
             isValid={senhaValid}
             onChange={handleSenhaChange}
           />
@@ -245,7 +248,8 @@ function FormPezin() {
             type="text"
             placeholder="CPF"
             ref={cpfRef}
-            style={{ background: "#F0EFFF", color: "#5d5a88" }}
+            style={{ background: "#F0EFFF"}}
+            className="TextPrimary"
             isValid={cpfValid}
             onChange={handleCpfChange}
           />
@@ -261,16 +265,18 @@ function FormPezin() {
               label="Concordo em submeter meus dados pessoais para a HapBox (Beta)."
               feedback="Você deve concordar antes de enviar."
               feedbackType="invalid"
-              style={{ zIndex: "2", color: "#fff" }}
+              style={{ zIndex: "2"}}
+              className="TextWhite"
             />
           </Form.Group>
         </Row>
       </Row>
-      <BotaoCadastro type="submit">
+      <BotaoCadastro type="submit" className="TextWhite">
         Criar Conta <i className="fas fa-arrow-right"></i>
       </BotaoCadastro>
       <Paragrafo01
-        style={{ color: "#fff", textAlign: "center", fontSize: "20px" }}
+        style={{textAlign: "center", fontSize: "20px" }}
+        className="TextWhite"
       >
         Já possui uma conta? <br />
         Você pode <a href="#">Fazer login aqui!</a>

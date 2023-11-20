@@ -1,12 +1,9 @@
-import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import styled from "styled-components";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import { useState } from "react";
 import { HashLink } from "react-router-hash-link";
@@ -14,18 +11,7 @@ import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { FaSignOutAlt } from "react-icons/fa";
 
-import {
-  Titulo01,
-  Subtitulo01,
-  Subtitulo02,
-  BotaoPrimario01,
-  BotaoPrimario02,
-  BotaoSecundario01,
-  Paragrafo01,
-} from "../Comum/Comum";
-
 const HeaderItens = styled(HashLink)`
-  color: #2d2c2c;
   font-family: Epilogue;
   font-size: 16px;
   font-style: normal;
@@ -38,22 +24,7 @@ const HeaderItens = styled(HashLink)`
   height: 100%;
 `;
 
-const HeaderItensDestaque = styled.h2`
-  color: #fff;
-  font-family: Epilogue;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  padding: 8px 20px;
-  justify-content: center;
-  align-items: center;
-  background-color: #ef5821;
-  text-transform: uppercase;
-  text-align: center;
-`;
-
 const HeaderUserName = styled.h2`
-color: #2d2c2c;
 font-family: Epilogue;
 font-size: 16px;
 font-style: normal;
@@ -106,7 +77,7 @@ function GlobalHeader() {
         <a href="#/">
           <img src={Logo} alt="Logo com ondinhas" style={{ height: "50px" }} />
         </a>
-        <HeaderUserName style={{ marginLeft: "10px" }}>
+        <HeaderUserName className="TextPrimary" style={{ marginLeft: "10px" }}>
           {firstName}
           <FaSignOutAlt style={{ marginLeft: "10px", cursor:"pointer" }} onClick={handleLogout} />
         </HeaderUserName>
@@ -139,7 +110,7 @@ function GlobalHeader() {
                   handleCloseOffcanvas();
                 }}
               >
-                <HeaderItens smooth to="#home">
+                <HeaderItens className="TextPrimary" smooth to="#home">
                   Home
                 </HeaderItens>
               </Nav.Link>
@@ -150,7 +121,7 @@ function GlobalHeader() {
                   handleCloseOffcanvas();
                 }}
               >
-                <HeaderItens smooth to="#vantagens">
+                <HeaderItens className="TextPrimary" smooth to="#vantagens">
                   Vantagens
                 </HeaderItens>
               </Nav.Link>
@@ -161,7 +132,7 @@ function GlobalHeader() {
                   handleCloseOffcanvas();
                 }}
               >
-                <HeaderItens smooth to="#desafio">
+                <HeaderItens className="TextPrimary" smooth to="#desafio">
                   Desafio
                 </HeaderItens>
               </Nav.Link>
@@ -171,7 +142,7 @@ function GlobalHeader() {
                   e.stopPropagation();
                 }}
               >
-                <HeaderItens smooth to="#quemSomos">
+                <HeaderItens className="TextPrimary" smooth to="#quemSomos">
                   Quem Somos
                 </HeaderItens>
               </Nav.Link>

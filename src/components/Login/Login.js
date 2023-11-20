@@ -8,8 +8,9 @@ import { Subtitulo01, Paragrafo01 } from "../Comum/Comum";
 
 import LogoBranco from "../../assets/LogoBranca.png";
 
+
+
 const BotaoLogin = styled.button`
-  color: #fff;
   text-align: center;
   font-feature-settings: "clig" off, "liga" off;
   font-family: DM Sans;
@@ -132,7 +133,8 @@ function FormGroupExample() {
       >
         <Subtitulo01
           id="Subtitulo01"
-          style={{ color: "#fff", textAlign: "center" }}
+          style={{textAlign: "center" }}
+          className="TextWhite"
         >
           Login
         </Subtitulo01>
@@ -141,7 +143,8 @@ function FormGroupExample() {
             size="lg"
             type="email"
             placeholder="Enter email"
-            style={{ background: "#F0EFFF", color: "#5d5a88" }}
+            style={{ background: "#F0EFFF"}}
+            className="TextPrimary"
             value={email}
             onChange={(element) => setEmail(element.target.value)}
             required
@@ -155,24 +158,27 @@ function FormGroupExample() {
             size="lg"
             type="password"
             placeholder="Password"
-            style={{ background: "#F0EFFF", color: "#5d5a88" }}
+            style={{ background: "#F0EFFF"}}
+            className="TextPrimary"
             value={password}
             onChange={(element) => setPassword(element.target.value)}
             required
           />
         </Form.Group>
         <Form.Group
-          className="mb-3"
+          className="mb-3 TextWhite"
           controlId="formBasicCheckbox"
-          style={{ zIndex: "2", color: "#fff" }}
+          style={{ zIndex: "2"}}
+
         >
           <Form.Check type="checkbox" label="Termos e condições" required />
         </Form.Group>
-        <BotaoLogin>
+        <BotaoLogin className="TextWhite">
           Login <i className="fas fa-arrow-right" type="submit"></i>
         </BotaoLogin>
         <Paragrafo01
-          style={{ color: "#fff", textAlign: "center", fontSize: "20px" }}
+          style={{textAlign: "center", fontSize: "20px" }}
+          className="TextWhite"
         >
           Ainda não possui uma conta? <br />
           Você pode <a href="#Cadastro">criar uma conta aqui!</a>

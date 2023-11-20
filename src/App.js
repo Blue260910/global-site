@@ -13,8 +13,7 @@ import Desafios from './components/Desafios/Desafios';
 import QuemSomos from './components/QuemSomos/QuemSomos';
 import Login from './components/Login/Login';
 import Cadastro from './components/Cadastro/Cadastro';
-// import Login from './components/Login/Login';
-// import Cadastro from './components/Cadastro/Cadastro';
+import './components/Comum/Variaveis.css';
 
 const HomePage = () => (
   <>

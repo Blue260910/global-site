@@ -16,7 +16,6 @@ const FooterContainer = styled.footer`
 `;
 
 const FooterItens = styled(HashLink)`
-  color: #2D2C2C;
   font-family: Epilogue;
   font-size: clamp(0.625rem, 0.357rem + 0.714vw, 1rem);
   font-style: normal;
@@ -41,13 +40,13 @@ function Footer() {
     <FooterContainer>
         <ul style={{display:"flex", alignItems:"center"}}>
           <img src={Logo} alt="Logo" />
-          <FooterItens smooth to="#home">Home</FooterItens>
-          <FooterItens smooth to="#vantagens">Vantagens</FooterItens>
-          <FooterItens smooth to="#desafio">Desafio</FooterItens>
-          <FooterItens smooth to="#quemSomos">Quem Somos</FooterItens>
+          <FooterItens className="TextPrimary" smooth to="#home">Home</FooterItens>
+          <FooterItens className="TextPrimary" smooth to="#vantagens">Vantagens</FooterItens>
+          <FooterItens className="TextPrimary" smooth to="#desafio">Desafio</FooterItens>
+          <FooterItens className="TextPrimary" smooth to="#quemSomos">Quem Somos</FooterItens>
         </ul>
         <Divider />
-          <FooterItens>2023 HapBox. All right reserved.</FooterItens>
+          <FooterItens className="TextPrimary">2023 HapBox. All right reserved.</FooterItens>
     </FooterContainer>
   );
 }

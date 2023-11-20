@@ -23,7 +23,6 @@ const HomeTextContainer = styled.div`
 `;
 
 const HomeTitulo = styled.h1`
-  color: #2D2C2C;
   font-family: Epilogue;
   font-size: clamp(3.125rem, 1.809rem + 7.018vw, 8.125rem);
   font-style: normal;
@@ -31,12 +30,7 @@ const HomeTitulo = styled.h1`
   text-transform: uppercase;
 `;
 
-const DestaqueTexto = styled.strong`
-    color: #EF5821;
-`
-
 const HomeSubtitulo = styled.h2`
-  color: #2D2C2C;
   font-family: Epilogue;
   font-size: clamp(1.125rem, 0.697rem + 2.281vw, 2.75rem);
   font-style: normal;
@@ -49,8 +43,8 @@ function Home() {
   return (
     <HomeContainer id="home">
       <HomeTextContainer>
-        <HomeTitulo>Hap<DestaqueTexto>Box</DestaqueTexto></HomeTitulo>
-        <HomeSubtitulo>Cuidando da Sua <DestaqueTexto>Saúde</DestaqueTexto>,<br /> <DestaqueTexto>Medicamento</DestaqueTexto> por <br /><DestaqueTexto>Medicamento</DestaqueTexto></HomeSubtitulo>
+        <HomeTitulo className="TextPrimary">Hap<strong>Box</strong></HomeTitulo>
+        <HomeSubtitulo className="TextPrimary">Cuidando da Sua <strong>Saúde</strong>,<br /> <strong>Medicamento</strong> por <br /><strong>Medicamento</strong></HomeSubtitulo>
       </HomeTextContainer>
       <img src={CoverImg01} alt="Imagem de capa" style={{width:"100%", maxWidth:"500px", margin:"0 auto"}}/> 
     </HomeContainer>
