@@ -18,7 +18,7 @@ const FooterContainer = styled.footer`
 const FooterItens = styled(HashLink)`
   color: #2D2C2C;
   font-family: Epilogue;
-  font-size: 16px;
+  font-size: clamp(0.625rem, 0.357rem + 0.714vw, 1rem);
   font-style: normal;
   font-weight: 400;
   text-transform: uppercase;

@@ -58,7 +58,7 @@ position: relative;
 margin-right: -18%;
 
 @media (max-width: 900px) {
-  margin-right: -7%;
+  margin-right: -1%;
   margin-top: 10%;
 }
 

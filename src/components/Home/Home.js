@@ -52,7 +52,7 @@ function Home() {
         <HomeTitulo>Hap<DestaqueTexto>Box</DestaqueTexto></HomeTitulo>
         <HomeSubtitulo>Cuidando da Sua <DestaqueTexto>Saúde</DestaqueTexto>,<br /> <DestaqueTexto>Medicamento</DestaqueTexto> por <br /><DestaqueTexto>Medicamento</DestaqueTexto></HomeSubtitulo>
       </HomeTextContainer>
-      <img src={CoverImg01} alt="Imagem de capa" style={{width:"100%", maxWidth:"500px"}}/> 
+      <img src={CoverImg01} alt="Imagem de capa" style={{width:"100%", maxWidth:"500px", margin:"0 auto"}}/> 
     </HomeContainer>
   );
 }

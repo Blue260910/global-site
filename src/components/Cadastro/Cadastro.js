@@ -44,6 +44,7 @@ const CadastroContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100vh;
+  align-items: center;
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
