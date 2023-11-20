@@ -1,3 +1,30 @@
+
+![logo](https://github.com/Blue260910/global-site/assets/84590776/d4fd3d07-239b-44cd-b157-2b90e74764ce)
+# Acesse em:
+- *O site:* https://blue260910.github.io/global-site/#/
+- *O Repositorio:* https://github.com/Blue260910/global-site
+
+# Informações úteis 
+
+**Nome dos integrantes do grupo:** </br>
+- *Felipe Cortez dos Santos RM:99750* </br>
+- *Victor Hugo Aranda Forte RM:99667* </br>
+
+**Turma: (ESPW)**
+
+**Ano: 2023**
+
+# Informações de Acesso
+
+Aqui estão exemplos de usuários e senhas para fins de demonstração:
+
+| Usuário    | Senha        |
+|------------|--------------|
+| John@gmail.com   | 12345678     |
+| Maria@gmai.com   | 12345678     |
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
