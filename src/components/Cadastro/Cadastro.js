@@ -7,6 +7,8 @@ import styled from "styled-components";
 import { Subtitulo01, Paragrafo01 } from "../Comum/Comum.js";
 import LogoBranco from "../../assets/LogoBranca.png";
 
+import { useHistory } from 'react-router-dom';
+
 const BotaoCadastro = styled.button`
   text-align: center;
   font-feature-settings: "clig" off, "liga" off;
@@ -64,6 +66,8 @@ function FormPezin() {
   const nameRef = useRef(null);
   const senhaRef = useRef(null);
 
+  const history = useHistory();
+
   function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
@@ -110,11 +114,13 @@ function FormPezin() {
       }
     );
 
+
+
     if (response.ok) {
       console.log("Dados adicionados com sucesso");
       setTimeout(() => {
-        window.location.reload();
-      }, 2000);
+        history.push('/');
+      }, 500);
     } else {
       console.error("Erro ao adicionar dados:", response.statusText);
     }
@@ -216,7 +222,7 @@ function FormPezin() {
         </Form.Group>
         <Form.Group
           as={Col}
-          md="5"
+          md="6"
           controlId="validationCustom02"
           className="mb-3"
         >
@@ -238,7 +244,7 @@ function FormPezin() {
         </Form.Group>
         <Form.Group
           as={Col}
-          md="5"
+          md="6"
           controlId="validationCustom03"
           className="mb-3"
         >
@@ -275,7 +281,7 @@ function FormPezin() {
         Criar Conta <i className="fas fa-arrow-right"></i>
       </BotaoCadastro>
       <Paragrafo01
-        style={{textAlign: "center", fontSize: "20px" }}
+        style={{textAlign: "center", fontSize: "12px", margin: "auto auto", width: "fit-content" }}
         className="TextWhite"
       >
         Já possui uma conta? <br />

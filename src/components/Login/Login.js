@@ -8,21 +8,19 @@ import { Subtitulo01, Paragrafo01 } from "../Comum/Comum";
 
 import LogoBranco from "../../assets/LogoBranca.png";
 
-
-
 const BotaoLogin = styled.button`
   text-align: center;
   font-feature-settings: "clig" off, "liga" off;
-  font-family: DM Sans;
+  font-family: Epilogue;
   font-size: clamp(0.625rem, 0.509rem + 0.617vw, 1.25rem);
   font-style: normal;
-  font-weight: 700;
+  font-weight: 800;
   border-radius: 9px;
   display: flex;
   padding: 2% 3%;
   align-items: center;
   gap: 8px;
-  background-color: #EF5821;
+  background-color: #ef5821;
   border: none;
   transition: all 0.2s ease-in-out;
 
@@ -41,7 +39,7 @@ const BotaoLogin = styled.button`
 `;
 
 const LoginContainer = styled.div`
-  background: #2D2C2C;
+  background: #2d2c2c;
   padding: 5%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -52,7 +50,6 @@ const LoginContainer = styled.div`
     grid-template-columns: 1fr;
     gap: 20px;
     height: 100vh;
-
   }
 `;
 
@@ -69,12 +66,21 @@ function FormGroupExample() {
           if (dataArray[i].Email === email) {
             if (dataArray[i].Senha === password) {
               console.log("Senha correta");
-              localStorage.setItem("loggedInUser", dataArray[i].Name); // Assuming the name is stored in the 'Name' property
-              history.push("/HomePage");
-              return; // colocar aqui o que caraios vao quere faze quando a senha estiver correta
+              localStorage.setItem("loggedInUser", dataArray[i].Name);
+              console.log("Login realizado com sucesso");
+              document.getElementById("Subtitulo01").innerText =
+                "Login realizado com sucesso";
+
+              setTimeout(() => {
+                history.push("/HomePage");
+              }, 1000);
+              return true;
             }
           }
         }
+        document.getElementById("Subtitulo01").innerText =
+          "Email ou senha incorretos";
+        console.log("Email ou senha incorretos");
       });
   }
 
@@ -91,20 +97,7 @@ function FormGroupExample() {
 
     if (form.checkValidity() === true) {
       console.log("Formulário válido");
-      getApi().then((response) => {
-        if (response === true) {
-          console.log("Login realizado com sucesso");
-          document.getElementById("Subtitulo01").innerText =
-            "Login realizado com sucesso";
-          setTimeout(() => {
-            window.location.reload();
-          }, 4000);
-        } else {
-          document.getElementById("Subtitulo01").innerText =
-            "Email ou senha incorretos";
-          console.log("Email ou senha incorretos");
-        }
-      });
+      getApi();
     } else {
       console.log("Formulário inválido");
     }
@@ -115,13 +108,17 @@ function FormGroupExample() {
 
     if (loggedInUser) {
       history.push("/HomePage");
-    } 
+    }
   }, [history]);
 
   return (
     <LoginContainer>
-      <img src={LogoBranco} alt="Logo" style={{ width: "30%", margin:"auto auto" }} />
-      
+      <img
+        src={LogoBranco}
+        alt="Logo"
+        style={{ width: "30%", margin: "auto auto" }}
+      />
+
       <Form
         style={{
           width: "100%",
@@ -133,7 +130,7 @@ function FormGroupExample() {
       >
         <Subtitulo01
           id="Subtitulo01"
-          style={{textAlign: "center" }}
+          style={{ textAlign: "center" }}
           className="TextWhite"
         >
           Login
@@ -143,7 +140,7 @@ function FormGroupExample() {
             size="lg"
             type="email"
             placeholder="Enter email"
-            style={{ background: "#F0EFFF"}}
+            style={{ background: "#F0EFFF" }}
             className="TextPrimary"
             value={email}
             onChange={(element) => setEmail(element.target.value)}
@@ -158,7 +155,7 @@ function FormGroupExample() {
             size="lg"
             type="password"
             placeholder="Password"
-            style={{ background: "#F0EFFF"}}
+            style={{ background: "#F0EFFF" }}
             className="TextPrimary"
             value={password}
             onChange={(element) => setPassword(element.target.value)}
@@ -168,21 +165,27 @@ function FormGroupExample() {
         <Form.Group
           className="mb-3 TextWhite"
           controlId="formBasicCheckbox"
-          style={{ zIndex: "2"}}
-
+          style={{ zIndex: "2" }}
         >
           <Form.Check type="checkbox" label="Termos e condições" required />
         </Form.Group>
         <BotaoLogin className="TextWhite">
           Login <i className="fas fa-arrow-right" type="submit"></i>
         </BotaoLogin>
-        <Paragrafo01
-          style={{textAlign: "center", fontSize: "20px" }}
-          className="TextWhite"
-        >
-          Ainda não possui uma conta? <br />
-          Você pode <a href="#Cadastro">criar uma conta aqui!</a>
-        </Paragrafo01>
+        <div style={{ alignItems: "center" }}>
+          <Paragrafo01
+            style={{
+              textAlign: "center",
+              fontSize: "12px",
+              margin: "auto auto",
+              width: "fit-content",
+            }}
+            className="TextWhite"
+          >
+            Ainda não possui uma conta? <br />
+            Você pode <a href="#Cadastro">criar uma conta aqui!</a>
+          </Paragrafo01>
+        </div>
       </Form>
     </LoginContainer>
   );

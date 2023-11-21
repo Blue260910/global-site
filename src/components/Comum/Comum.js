@@ -20,7 +20,7 @@ const DestaqueTexto = styled.h1`
 export const Titulo01 = styled.h1`
     text-align: center;
     font-feature-settings: 'clig' off, 'liga' off;
-    font-family: DM Sans;
+    font-family: Epilogue;
     font-size: clamp(2.813rem, 2.639rem + 0.926vw, 3.75rem);
     font-style: normal;
     font-weight: 700;
@@ -29,7 +29,7 @@ export const Titulo01 = styled.h1`
 export const Subtitulo01 = styled.h2`
     text-align: center;
     font-feature-settings: 'clig' off, 'liga' off;
-    font-family: DM Sans;
+    font-family: Epilogue;
     font-size: clamp(1.563rem, 1.389rem + 0.926vw, 2.5rem);
     font-style: normal;
     font-weight: 700;
@@ -37,25 +37,25 @@ export const Subtitulo01 = styled.h2`
 
 export const Subtitulo02 = styled.h3`
     text-align: center;
-    font-family: DM Sans;
+    font-family: Epilogue;
     font-size: clamp(1.063rem, 0.889rem + 0.926vw, 2rem);
     font-style: normal;
     font-weight: 700;
 `;
 
 export const Paragrafo01 = styled.p`
-    text-align: center;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: DM Sans;
+    text-align: justify;
     font-size: clamp(0.938rem, 0.764rem + 0.926vw, 1.875rem);
+    font-family: Epilogue;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
+    text-transform: uppercase;
 `;
 
 export const BotaoPrimario01 = styled(Link)`
     text-align: center;
     font-feature-settings: "clig" off, "liga" off;
-    font-family: DM Sans;
+    font-family: Epilogue;
     font-size: clamp(0.625rem, 0.509rem + 0.617vw, 1.25rem);
     font-style: normal;
     font-weight: 700;
