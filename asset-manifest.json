@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/global-site/static/css/main.77ace270.css",
-    "main.js": "/global-site/static/js/main.3be3cbb1.js",
+    "main.css": "/global-site/static/css/main.efa3f22e.css",
+    "main.js": "/global-site/static/js/main.aa646c2c.js",
     "static/js/872.0486cfdd.chunk.js": "/global-site/static/js/872.0486cfdd.chunk.js",
     "static/js/227.6917ce92.chunk.js": "/global-site/static/js/227.6917ce92.chunk.js",
     "static/js/526.7630a563.chunk.js": "/global-site/static/js/526.7630a563.chunk.js",
@@ -15,8 +15,8 @@
     "static/media/Senhora.png": "/global-site/static/media/Senhora.1feca62536db6fc990a4.png",
     "static/media/palavras-grandes.png": "/global-site/static/media/palavras-grandes.24902bd3ff9c930596b0.png",
     "index.html": "/global-site/index.html",
-    "main.77ace270.css.map": "/global-site/static/css/main.77ace270.css.map",
-    "main.3be3cbb1.js.map": "/global-site/static/js/main.3be3cbb1.js.map",
+    "main.efa3f22e.css.map": "/global-site/static/css/main.efa3f22e.css.map",
+    "main.aa646c2c.js.map": "/global-site/static/js/main.aa646c2c.js.map",
     "872.0486cfdd.chunk.js.map": "/global-site/static/js/872.0486cfdd.chunk.js.map",
     "227.6917ce92.chunk.js.map": "/global-site/static/js/227.6917ce92.chunk.js.map",
     "526.7630a563.chunk.js.map": "/global-site/static/js/526.7630a563.chunk.js.map",
@@ -25,7 +25,7 @@
     "787.9a5c1d4b.chunk.js.map": "/global-site/static/js/787.9a5c1d4b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.77ace270.css",
-    "static/js/main.3be3cbb1.js"
+    "static/css/main.efa3f22e.css",
+    "static/js/main.aa646c2c.js"
   ]
 }
